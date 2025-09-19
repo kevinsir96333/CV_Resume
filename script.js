@@ -38,19 +38,46 @@
     }
   }
 
+  const openNavMenu = () => {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', '메뉴 닫기');
+  };
+
+  const closeNavMenu = () => {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', '메뉴 열기');
+  };
+
   // Mobile nav toggle
   navToggle?.addEventListener('click', () => {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!expanded));
-    navMenu?.classList.toggle('open');
-    navToggle.setAttribute('aria-label', expanded ? '메뉴 열기' : '메뉴 닫기');
+    if (expanded) closeNavMenu();
+    else openNavMenu();
   });
   // Close menu after clicking a link (mobile)
-  navMenu?.addEventListener('click', (e) => {
-    if ((e.target).closest('a')) {
-      navMenu.classList.remove('open');
-      navToggle?.setAttribute('aria-expanded', 'false');
-      navToggle?.setAttribute('aria-label', '메뉴 열기');
+  navMenu?.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest('a')) {
+      closeNavMenu();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!navMenu?.classList.contains('open')) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (navMenu.contains(target) || navToggle?.contains(target)) return;
+    closeNavMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu?.classList.contains('open')) {
+      closeNavMenu();
+      navToggle?.focus();
     }
   });
 
@@ -66,12 +93,36 @@
   // Active section highlight in nav
   const sections = Array.from(document.querySelectorAll('main section[id]'));
   const navLinks = Array.from(document.querySelectorAll('.nav__menu a'));
-  const linkById = (id) => navLinks.find(a => a.getAttribute('href') === `#${id}`);
+  const sectionVisibility = new Map();
+  const setActiveNav = (id) => {
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('active', Boolean(id) && isActive);
+    });
+  };
+  const clearActiveNav = () => navLinks.forEach(link => link.classList.remove('active'));
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      const link = linkById(entry.target.id);
-      if (link) link.classList.toggle('active', entry.isIntersecting);
+      const ratio = entry.isIntersecting ? entry.intersectionRatio : 0;
+      sectionVisibility.set(entry.target.id, ratio);
     });
-  }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
-  sections.forEach(s => io.observe(s));
+
+    let bestId = '';
+    let bestRatio = 0;
+    sectionVisibility.forEach((ratio, id) => {
+      if (ratio > bestRatio) {
+        bestId = id;
+        bestRatio = ratio;
+      }
+    });
+
+    if (bestId) setActiveNav(bestId);
+    else clearActiveNav();
+  }, { rootMargin: '-40% 0px -40% 0px', threshold: [0, 0.25, 0.5, 0.75] });
+
+  sections.forEach(section => {
+    sectionVisibility.set(section.id, 0);
+    io.observe(section);
+  });
 })();
