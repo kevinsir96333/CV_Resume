@@ -1,14 +1,14 @@
 ﻿<!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kevin KIM · Economics & ECE</title>
-  <meta name="description" content="KIM's Portfolio and self-description" />
+  <meta name="description" content="Kevin KIM's Portfolio · Economics & ECE · Projects, Experience, Contact" />
   <meta name="color-scheme" content="light dark" />
 
-  <meta property="og:title" content="KIM's Portfolio" />
-  <meta property="og:description" content="KIM's Portfolio and self-description" />
+  <meta property="og:title" content="Kevin KIM · Portfolio" />
+  <meta property="og:description" content="Economics & ECE · Projects, Experience, Contact" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:url" content="https://kevinsr96333.github.io/CV_Resume" />
@@ -18,7 +18,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "김정훈훈",
+    "name": "Kevin KIM",
     "url": "https://kevinsr96333.github.io/CV_Resume",
     "image": "https://kevinsr96333.github.io/CV_Resume/assets/profile-512.jpg",
     "jobTitle": "Economist & Analyst",
@@ -38,21 +38,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a href="#main" class="skip-link">본문 바로가기</a>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-header" id="top">
-    <nav class="nav container" aria-label="주요">
-      <a class="logo" href="#top" aria-label="홈">HGD</a>
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="#top" aria-label="Home">Kevin KIM</a>
 
-      <button class="nav__toggle" id="navToggle"
-              aria-expanded="false" aria-controls="navMenu" aria-label="메뉴 열기">Menu</button>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">Menu</button>
 
       <ul class="nav__menu" id="navMenu">
         <li><a href="#about">Introduction</a></li>
-        <li><a href="#skills">Career</a></li>
-        <li><a href="#projects">Project</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">🌗</button></li>
+        <li><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌗</button></li>
       </ul>
     </nav>
   </header>
@@ -60,63 +59,84 @@
   <main id="main">
     <section class="hero container" id="about">
       <div class="hero__text">
-        <h1>안녕하세요, <span class="accent">홍길동</span>입니다</h1>
+        <h1>Hello, I’m <span class="accent">Jeong Hoon KIM</span></h1>
         <p class="lead">
-          경제학 · 인텔리전스 커뮤니케이션 복수전공. 데이터를 통해 도시 문제를 해결하고,
-          사람과 기술을 잇는 일을 합니다.
+          Economics & ECE @ Seoul National University · Passionate about quantitative research and technology-driven finance.
         </p>
         <div class="hero__cta">
-          <a class="btn" href="#projects">프로젝트 보기</a>
-          <a class="btn btn--ghost" href="assets/Resume.pdf" download>이력서 다운로드</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn btn--ghost" href="assets/Resume.pdf" download>Download Resume</a>
         </div>
         <ul class="social">
-          <li><a href="https://github.com/kevinsr96333" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/kevinsr96333" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="mailto:me@example.com">Email</a></li>
+          <li><a href="https://github.com/kevinsr96333" target="_blank" rel="noopener me" aria-label="GitHub">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/kevinsr96333" target="_blank" rel="noopener me" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="mailto:me@example.com" aria-label="Email">Email</a></li>
         </ul>
       </div>
 
       <div class="hero__img">
         <picture>
-          <source srcset="assets/profile-512.webp 512w, assets/profile-256.webp 256w"
-                  sizes="(max-width: 600px) 160px, 240px" type="image/webp" />
-          <img src="assets/profile-512.jpg" width="240" height="240"
-               alt="홍길동의 프로필 사진" loading="eager" decoding="async" />
+          <source srcset="assets/profile-512.webp 512w, assets/profile-256.webp 256w" sizes="(max-width: 600px) 160px, 240px" type="image/webp" />
+          <img src="assets/profile-512.jpg" width="240" height="240" alt="Profile picture of Kevin KIM" loading="eager" decoding="async" />
         </picture>
       </div>
     </section>
 
-    <section class="section container" id="skills">
-      <h2>스킬</h2>
-      <ul class="tags">
-        <li>Python</li><li>C++</li><li>HTML/CSS/JS</li><li>데이터 분석</li><li>도시/물류</li>
+    <section class="section container" id="experience">
+      <h2>Experience & Skills</h2>
+
+      <ul class="tags" aria-label="Key Skills">
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML/CSS/JS</li>
+        <li>Algorithm Analysis</li>
+        <li>Economic &amp; Industrial (TMT, Bio) Analysis</li>
       </ul>
 
       <div class="grid grid--3">
         <article class="card">
           <div class="card__body">
-            <h3>경험</h3>
+            <h3>Experience</h3>
             <ul class="list">
-              <li>도시 물류 프로젝트 (라스트마일 최적화)</li>
-              <li>연구조교 (데이터 수집·시각화)</li>
+              <li>
+                <span class="list-item__title">PS Capital Partners</span>
+                <ul class="list list--sub">
+                  <li>Private Equity Intern (Aug 2025 – Present)</li>
+                  <li>Deal sourcing and financial modeling</li>
+                </ul>
+              </li>
+              <li>
+                <span class="list-item__title">Alpha Brothers</span>
+                <ul class="list list--sub">
+                  <li>Technical Staff (Feb 2025 – Jun 2025)</li>
+                  <li>Patent strategy and service architecture</li>
+                  <li>Developed foundational AI service pipeline</li>
+                </ul>
+                <ul class="list list--sub">
+                  <li>Strategy Intern (Nov 2024 – Jan 2025)</li>
+                  <li>Market research and KPI dashboard development</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </article>
+
         <article class="card">
           <div class="card__body">
-            <h3>교육</h3>
+            <h3>Selected Projects & Roles</h3>
             <ul class="list">
-              <li>Seoul National University</li>
-              <li>Transportation & Logistics Economics</li>
+              <li>Research Assistant (Data Collection & Visualization)</li>
+              <li>Undergraduate Researcher (AI Policy & Future Strategy)</li>
             </ul>
           </div>
         </article>
+
         <article class="card">
           <div class="card__body">
-            <h3>관심사</h3>
+            <h3>At a Glance</h3>
             <ul class="list">
-              <li>스마트 물류 · 자동화</li>
-              <li>도시 데이터(POI/모빌리티)</li>
+              <li>Interested in the intersection of economics, data, and engineering</li>
+              <li>Experience in analytical dashboards and data-driven strategy</li>
             </ul>
           </div>
         </article>
@@ -124,40 +144,28 @@
     </section>
 
     <section class="section container" id="projects">
-      <h2>프로젝트</h2>
+      <h2>Projects</h2>
       <div class="grid grid--3">
         <article class="card">
-          <img src="assets/proj1.webp" alt="Rethink Urban Delivery 프로젝트 미리보기" loading="lazy" width="600" height="400" />
+          <img src="assets/proj2.webp" alt="Urban Housing Planning Project preview" loading="lazy" width="600" height="400" />
           <div class="card__body">
-            <h3>Rethink Urban Delivery</h3>
-            <p>서울 라스트마일 배송 동선 최적화와 친환경성 개선을 위한 제안과 데이터 분석.</p>
+            <h3>Urban Housing Data Lab</h3>
+            <p>Data-driven research on spatial planning and energy simulation for residential areas.</p>
             <div class="card__actions">
-              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">데모</a>
-              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">코드</a>
+              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Slides</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Report</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/proj2.webp" alt="도시 주거지 계획 프로젝트 미리보기" loading="lazy" width="600" height="400" />
+          <img src="assets/proj3.webp" alt="Data Analysis Dashboard preview" loading="lazy" width="600" height="400" />
           <div class="card__body">
-            <h3>도시 주거지 계획 데이터랩</h3>
-            <p>지표 기반 보행 커뮤니티 통합 배치와 조망·에너지 시뮬레이션 연구.</p>
+            <h3>Data Analysis Dashboard</h3>
+            <p>Interactive dashboards for monitoring economic and industrial indicators.</p>
             <div class="card__actions">
-              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">발표자료</a>
-              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">보고서</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/proj3.webp" alt="데이터 분석 대시보드 미리보기" loading="lazy" width="600" height="400" />
-          <div class="card__body">
-            <h3>데이터 분석 대시보드</h3>
-            <p>도시·물류 데이터 추세 분석과 지표 모니터링을 위한 인터랙티브 대시보드.</p>
-            <div class="card__actions">
-              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">데모</a>
-              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">코드</a>
+              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Code</a>
             </div>
           </div>
         </article>
@@ -165,33 +173,33 @@
     </section>
 
     <section class="section container" id="contact">
-      <h2>연락하기</h2>
-      <p>협업 제안이나 문의는 <a href="mailto:me@example.com">me@example.com</a>으로 메일 주세요.</p>
+      <h2>Contact</h2>
+      <p>For collaboration or inquiries, email <a href="mailto:me@example.com">me@example.com</a>.</p>
 
       <form class="form" name="contact" action="mailto:me@example.com" method="post" enctype="text/plain">
         <div class="form__row">
-          <label for="name">이름</label>
+          <label for="name">Name</label>
           <input id="name" name="name" required />
         </div>
         <div class="form__row">
-          <label for="email">이메일</label>
+          <label for="email">Email</label>
           <input id="email" type="email" name="email" required />
         </div>
         <div class="form__row">
-          <label for="message">메시지</label>
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <button class="btn" type="submit">보내기</button>
+        <button class="btn" type="submit">Send</button>
       </form>
-      <p class="form-tip">※ 실제 서비스 연동 시 Formspree 등의 action URL로 바꿔 주세요.</p>
+      <p class="form-tip">※ Replace mailto with Formspree or another endpoint for production use.</p>
     </section>
   </main>
 
-  <button id="toTop" class="to-top" aria-label="맨 위로">▲</button>
+  <button id="toTop" class="to-top" aria-label="Back to top">▲</button>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> 홍길동 · 마지막 갱신: <time id="lastUpdated"></time></small>
+      <small>© <span id="year"></span> Kevin KIM · Last Update: <time id="lastUpdated"></time></small>
     </div>
   </footer>
 

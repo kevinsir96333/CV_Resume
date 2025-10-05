@@ -83,7 +83,7 @@
   // Active section highlight in nav
   const sections = Array.from(document.querySelectorAll('main section[id]'));
   const navLinks = Array.from(document.querySelectorAll('.nav__menu a'));
-  const linkById = (id) => navLinks.find((anchor) => anchor.getAttribute('href') === #);
+  const linkById = (id) => navLinks.find((anchor) => anchor.getAttribute('href') === `#${id}`);
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
