@@ -4,32 +4,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kevin KIM · Economics & ECE</title>
-  <meta name="description" content="Kevin KIM's Portfolio · Economics & ECE · Projects, Experience, Contact" />
+  <meta name="description" content="Kevin KIM's Portfolio · Economics & ECE · Projects, Experience, Education, Contact" />
   <meta name="color-scheme" content="light dark" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Kevin KIM · Portfolio" />
-  <meta property="og:description" content="Economics & ECE · Projects, Experience, Contact" />
+  <meta property="og:description" content="Economics & ECE · Projects, Experience, Education, Contact" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:url" content="https://kevinsr96333.github.io/CV_Resume" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Kevin KIM",
+    "name": "Jeong Hoon (Kevin) KIM",
     "url": "https://kevinsr96333.github.io/CV_Resume",
     "image": "https://kevinsr96333.github.io/CV_Resume/assets/profile-512.jpg",
     "jobTitle": "Economist & Analyst",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Seoul National University"
-    },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Seoul National University" },
     "sameAs": [
       "https://github.com/kevinsr96333",
       "https://www.linkedin.com/in/kevinsr96333",
-      "mailto:me@example.com"
+      "mailto:kevin099820@naver.com"
     ]
   }
   </script>
@@ -43,13 +42,12 @@
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main">
       <a class="logo" href="#top" aria-label="Home">Kevin KIM</a>
-
       <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">Menu</button>
-
       <ul class="nav__menu" id="navMenu">
         <li><a href="#about">Introduction</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌗</button></li>
       </ul>
@@ -57,11 +55,12 @@
   </header>
 
   <main id="main">
+    <!-- Hero / About -->
     <section class="hero container" id="about">
       <div class="hero__text">
         <h1>Hello, I’m <span class="accent">Jeong Hoon KIM</span></h1>
         <p class="lead">
-          Economics & ECE @ Seoul National University · Passionate about quantitative research and technology-driven finance.
+          Economics & ECE @ Seoul National University · Quantitative research and technology-driven finance.
         </p>
         <div class="hero__cta">
           <a class="btn" href="#projects">Projects</a>
@@ -70,7 +69,7 @@
         <ul class="social">
           <li><a href="https://github.com/kevinsr96333" target="_blank" rel="noopener me" aria-label="GitHub">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/kevinsr96333" target="_blank" rel="noopener me" aria-label="LinkedIn">LinkedIn</a></li>
-          <li><a href="mailto:me@example.com" aria-label="Email">Email</a></li>
+          <li><a href="mailto:kevin099820@naver.com" aria-label="Email">kevin099820@naver.com</a></li>
         </ul>
       </div>
 
@@ -82,67 +81,114 @@
       </div>
     </section>
 
+    <!-- Experience / Skills -->
     <section class="section container" id="experience">
       <h2>Experience & Skills</h2>
 
+      <!-- Skills (resume-based) -->
       <ul class="tags" aria-label="Key Skills">
-        <li>Python</li>
-        <li>C++</li>
-        <li>HTML/CSS/JS</li>
-        <li>Algorithm Analysis</li>
-        <li>Economic &amp; Industrial (TMT, Bio) Analysis</li>
+        <li>Python</li><li>C++</li><li>C</li><li>Scala</li><li>Rust</li>
+        <li>Excel (Pro‑Forma Modeling)</li><li>PowerPoint</li><li>Word</li>
       </ul>
 
       <div class="grid grid--3">
+        <!-- Professional Experience (company image + one-line description slots) -->
         <article class="card">
           <div class="card__body">
-            <h3>Experience</h3>
-            <ul class="list">
-              <li>
-                <span class="list-item__title">PS Capital Partners</span>
-                <ul class="list list--sub">
-                  <li>Private Equity Intern (Aug 2025 – Present)</li>
-                  <li>Deal sourcing and financial modeling</li>
-                </ul>
-              </li>
-              <li>
-                <span class="list-item__title">Alpha Brothers</span>
-                <ul class="list list--sub">
-                  <li>Technical Staff (Feb 2025 – Jun 2025)</li>
-                  <li>Patent strategy and service architecture</li>
-                  <li>Developed foundational AI service pipeline</li>
-                </ul>
-                <ul class="list list--sub">
-                  <li>Strategy Intern (Nov 2024 – Jan 2025)</li>
-                  <li>Market research and KPI dashboard development</li>
-                </ul>
-              </li>
-            </ul>
+            <h3>Professional Experience</h3>
+
+            <!-- PS Capital Partners -->
+            <div class="exp">
+              <div class="exp__org">
+                <!-- Put your logo at assets/logos/ps-capital.png -->
+                <img class="exp__logo" src="assets/logos/ps-capital.png" alt="PS Capital Partners logo" width="72" height="72" />
+                <div class="exp__meta">
+                  <h4>PS Capital Partners <span class="role">· Private Equity Intern</span></h4>
+                  <p class="meta">Aug 2025 – Present · Seoul, Korea</p>
+                  <p class="org-desc">[One‑line company overview here, e.g., “Mid‑market PE firm focused on TMT & healthcare.”]</p>
+                </div>
+              </div>
+              <ul class="list list--sub">
+                <li>Deal sourcing and pipeline qualification.</li>
+                <li>Built and audited financial models for target screening.</li>
+              </ul>
+            </div>
+
+            <!-- Alpha Brothers -->
+            <div class="exp">
+              <div class="exp__org">
+                <!-- Put your logo at assets/logos/alpha-brothers.png -->
+                <img class="exp__logo" src="assets/logos/alpha-brothers.png" alt="Alpha Brothers logo" width="72" height="72" />
+                <div class="exp__meta">
+                  <h4>Alpha Brothers <span class="role">· Technical Staff (Contract)</span></h4>
+                  <p class="meta">Feb 2025 – Jun 2025 · Seoul, Korea</p>
+                  <p class="org-desc">[One‑line company overview here, e.g., “Early‑stage AI product studio.”]</p>
+                </div>
+              </div>
+              <ul class="list list--sub">
+                <li>Patent strategy and service system architecture.</li>
+                <li>Built foundational pipeline for an AI service.</li>
+              </ul>
+              <ul class="list list--sub">
+                <li><span class="role">Strategy Intern</span> (Nov 2024 – Jan 2025): Market research and KPI dashboard; set up basic AI service pipeline.</li>
+              </ul>
+            </div>
           </div>
         </article>
 
+        <!-- Research Experience (from resume) -->
         <article class="card">
           <div class="card__body">
-            <h3>Selected Projects & Roles</h3>
-            <ul class="list">
-              <li>Research Assistant (Data Collection & Visualization)</li>
-              <li>Undergraduate Researcher (AI Policy & Future Strategy)</li>
-            </ul>
+            <h3>Research Experience</h3>
+
+            <div class="exp">
+              <div class="exp__org">
+                <img class="exp__logo" src="assets/logos/snu-ier.png" alt="SNU Institute of Economics Research logo" width="72" height="72" />
+                <div class="exp__meta">
+                  <h4>Institute of Economics Research, SNU <span class="role">· Research Assistant (CCES)</span></h4>
+                  <p class="meta">Mar 2023 – Jan 2024 · Seoul, Korea</p>
+                  <p class="org-desc">Comparative economic studies on distribution, GVCs, and the semiconductor industry.</p>
+                </div>
+              </div>
+              <ul class="list list--sub">
+                <li>Analyzed labor & income distribution using OECD/World Bank/KOSIS data; reviewed ~30 papers.</li>
+                <li>Supported projects on GVCs/semiconductor competition in East Asia and varieties of capitalism in Korea.</li>
+                <li>Coordinated 18th EAEA conference sessions; interpretation & logistics.</li>
+              </ul>
+            </div>
+
+            <div class="exp">
+              <div class="exp__org">
+                <img class="exp__logo" src="assets/logos/snu-ifs.png" alt="SNU Institute for Future Strategy logo" width="72" height="72" />
+                <div class="exp__meta">
+                  <h4>Institute for Future Strategy, SNU <span class="role">· Undergraduate Researcher</span></h4>
+                  <p class="meta">Jan 2023 – Apr 2023 · Seoul, Korea</p>
+                  <p class="org-desc">Science, Technology & Future Cluster—planning and research for QSF program.</p>
+                </div>
+              </div>
+              <ul class="list list--sub">
+                <li>Structured the blueprint for the QSF program; coordinated meetings and prepared notes.</li>
+                <li>Benchmarked website/database models for the program.</li>
+              </ul>
+            </div>
           </div>
         </article>
 
+        <!-- Languages & Tools -->
         <article class="card">
           <div class="card__body">
-            <h3>At a Glance</h3>
+            <h3>Languages & Tools</h3>
             <ul class="list">
-              <li>Interested in the intersection of economics, data, and engineering</li>
-              <li>Experience in analytical dashboards and data-driven strategy</li>
+              <li><strong>Languages</strong>: Korean, English</li>
+              <li><strong>Tools</strong>: Excel (Pro‑Forma Modeling), PowerPoint, Word</li>
+              <li><strong>Programming</strong>: Python, C/C++, Scala, Rust</li>
             </ul>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Projects (no urban‑logistics content) -->
     <section class="section container" id="projects">
       <h2>Projects</h2>
       <div class="grid grid--3">
@@ -150,7 +196,7 @@
           <img src="assets/proj2.webp" alt="Urban Housing Planning Project preview" loading="lazy" width="600" height="400" />
           <div class="card__body">
             <h3>Urban Housing Data Lab</h3>
-            <p>Data-driven research on spatial planning and energy simulation for residential areas.</p>
+            <p>Data‑driven research on spatial planning and energy simulation for residential areas.</p>
             <div class="card__actions">
               <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Slides</a>
               <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Report</a>
@@ -169,14 +215,61 @@
             </div>
           </div>
         </article>
+
+        <article class="card">
+          <img src="assets/proj4.webp" alt="AI Service Pipeline prototype preview" loading="lazy" width="600" height="400" />
+          <div class="card__body">
+            <h3>AI Service Pipeline Prototype</h3>
+            <p>Foundational pipeline for an AI service (data ingestion, preprocessing, and KPI dashboard).</p>
+            <div class="card__actions">
+              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+              <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- Education & Awards (resume-based) -->
+    <section class="section container" id="education">
+      <h2>Education & Awards</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="card__body">
+            <h3>Education</h3>
+            <ul class="list">
+              <li><span class="list-item__title">Seoul National University</span> · Major in Economics; Double Major in Intelligent Communication (ECE); Minor in Financial Economics · GPA 3.83/4.3</li>
+              <li><span class="list-item__title">Hanil High School</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__body">
+            <h3>Awards</h3>
+            <ul class="list">
+              <li>STX Scholarship (15th), STX Foundation (Feb 2023)</li>
+              <li>Army Achievement Medal, U.S. Army (Jan 2022)</li>
+              <li>Certificate of Achievement, U.S. Army (Dec 2022)</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__body">
+            <h3>Activities</h3>
+            <ul class="list">
+              <li>Main presenter, SNU Social Science Classic Reading Symposium: <em>The Theory of Moral Sentiments</em> (Dec 2022)</li>
+              <li>QSF Discussion Panel, SNU Institute for Future Strategy (Aug 2022)</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section class="section container" id="contact">
       <h2>Contact</h2>
-      <p>For collaboration or inquiries, email <a href="mailto:me@example.com">me@example.com</a>.</p>
-
-      <form class="form" name="contact" action="mailto:me@example.com" method="post" enctype="text/plain">
+      <p>For collaboration or inquiries, email <a href="mailto:kevin099820@naver.com">kevin099820@naver.com</a>.</p>
+      <form class="form" name="contact" action="mailto:kevin099820@naver.com" method="post" enctype="text/plain">
         <div class="form__row">
           <label for="name">Name</label>
           <input id="name" name="name" required />
@@ -191,7 +284,7 @@
         </div>
         <button class="btn" type="submit">Send</button>
       </form>
-      <p class="form-tip">※ Replace mailto with Formspree or another endpoint for production use.</p>
+      <p class="form-tip">※ Replace <code>mailto:</code> with a form endpoint (e.g., Formspree) when deploying.</p>
     </section>
   </main>
 
